@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "AppleSDGothicNeoB";
+    src: url(/font/AppleSDGothicNeoB.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoLB";
+    src: url(/font/AppleSDGothicNeoL.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoM";
+    src: url(/font/AppleSDGothicNeoM.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoEB";
+    src: url(/font/AppleSDGothicNeoEB.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoH";
+    src: url(/font/AppleSDGothicNeoEB.ttf);
+}
+
+*{
+    font-family: "AppleSDGothicNeoM";
+}
+
+.search-form{
+    text-align: center;
+    background-color: #FFF;
+    vertical-align: middle;
+    display: inline-flex;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    transform: (-50%, -50%);
+    height: 10%;
+    width: 80%;
+    border-radius: 5px;
+    flex-flow: row wrap;
+}
+
+.search-box{
+    background-color: #FFF;
+    vertical-align: middle;
+    height: 50%;
+    margin: 10% 0;
+    width: 100%;
+    border-radius: 20px;
+    display: inline-flex;
+}
+
+#search-form-input{
+    -webkit-appearance: none;
+    border: none;
+    background-color: #FFF;
+    outline: none;
+    width: 70%;
+}
+
+#search-form-button-img{
+    vertical-align: middle;
+    background-color: #FFF;
+    font-size: 40px;
+    height: auto;
+}
+
+#search-form-button{
+    vertical-align: middle;
+    border: none;
+    background-color: #FFF;
+    width: 10%;
+    height: 100%;
+}

@@ -21,9 +21,13 @@ def new(request):
 
 def create(request):
     new_blog = Blog()
-    new_blog.title = request.POST['title']
+    new_blog.start = request.POST['start']
+    new_blog.end = request.POST['end']
     new_blog.body = request.POST['body']
+    new_blog.body1 = request.POST['body1']
+    new_blog.body2 = request.POST['body2']
     new_blog.image =request.FILES.get('image')
+    new_blog.mapimg =request.FILES.get('mapimg')
     new_blog.save()
     return redirect('detail', new_blog.id)
 
@@ -32,7 +36,7 @@ def search(request):
     q = request.POST.get('q',"")
 
     if q:
-        blogs = blogs.filter(title__icontains=q)
+        blogs = blogs.filter(start__icontains=q)
         return render(request, 'search.html',{'blogs' : blogs, 'q' : q})
 
     else:

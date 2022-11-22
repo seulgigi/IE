@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "AppleSDGothicNeoB";
+    src: url(/font/AppleSDGothicNeoB.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoLB";
+    src: url(/font/AppleSDGothicNeoL.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoM";
+    src: url(/font/AppleSDGothicNeoM.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoEB";
+    src: url(/font/AppleSDGothicNeoEB.ttf);
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoH";
+    src: url(/font/AppleSDGothicNeoEB.ttf);
+}
+
+.detail-container{
+    font-family: "AppleSDGothicNeoM";
+    margin-top: 100px;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    top: 100px;
+}

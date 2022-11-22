@@ -1,0 +1,9 @@
+
+<div class="result-nav">
+    <div class="logo-img"><a href="{% url 'showmain' %}">logo???</a></div>
+    <form class="nav-search" action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <input id="nav-search-input" type="search" placeholder="건물을 입력하세요" aria-label="Search" name="q" value="{{q}}">
+        <button id="nav-search-button" type="submit"><i id="nav-search-button" class="fa-solid fa-location-dot"></i></button>
+    </form>
+</div>

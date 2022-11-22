@@ -2,18 +2,96 @@
 {% load static %}
 
 {% block content %}
+{% include 'shared/_navbar.html' %}
 
-<h1>출발 : {{blog.title}}</h1>
-<h2>도착 : {{blog.writer}}</h2>
-<hr>
-{% if blog.image %}
-    <p><img src="{{ blog.image.url }}" alt="사진"></p>
-{% endif %}
+<style>
+*{
+    font-family: "AppleSDGothicNeoB";
+}
 
-<p>{{blog.body}}</p>
+.detail-start-end{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 35px;
+}
+
+.detail-start{
+    width: 30%;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin-left: 10%;
+
+}
+
+.detail-end{
+    width: 30%;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin-left: 20%;
+    
+}
+
+
+#box-img{
+    width: 20%;
+    margin-left: 10%;
+    background-color: #FFF;
+    color: #BAC8CB;
+}
+
+#box-img i {
+    background-color: #FFF;
+    font-size: 35px;
+    padding-top: 5%;
+}
+
+#box-main{
+    background-color: #FFF;
+    font-size: 30px;
+}
+
+#list-box{
+    margin-top: 10%;
+}
+</style>
+
+<div class="search-container">
+    <div class="build-img">
+        <img src="{{blog.mapimg.url}}" alt="사진">
+    </div>
+    <div class="build-list"> 
+        <div class="detail-start-end">
+            <div class="detail-start">{{blog.start}}</div>
+            <div class="detail-end">{{blog.end}}</div>
+        </div>
+        <div class="build-main-list" style="height: 10000px;">
+            {% if blog.body %}
+            <div class="build-main-list-box" id="list-box" style="margin-top: 10%; margin-bottom: 10%;">
+                <div id="box-img"><i class="fa-solid fa-1"></i></div>
+                <div id="box-main">{{blog.body}}</div>
+            </div>
+            <hr id="box-hr" style="width: 80%;">
+            {% endif %}
+            {% if blog.body1 %}
+            <div class="build-main-list-box" id="list-box" style="margin-top: 10%; margin-bottom: 10%;">
+                <div id="box-img"><i class="fa-solid fa-2"></i></div>
+                <div id="box-main">{{blog.body1}}</div>
+            </div>
+            <hr id="box-hr" style="width: 80%;">
+            {% endif %}
+            {% if blog.body2 %}
+            <div class="build-main-list-box" id="list-box" style="margin-top: 10%; margin-bottom: 10%;">
+                <div id="box-img"><i class="fa-solid fa-3"></i></div>
+                <div id="box-main">{{blog.body2}}</div>
+            </div>
+            {% endif %}
+            <!-- <hr id="box-hr" style="width: 80%;"> -->
+        </div>
+    </div>
+    <br>
+</div>
+
 
 {% endblock %}
-
-
-
-

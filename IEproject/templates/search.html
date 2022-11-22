@@ -1,26 +1,51 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-        {% if not blogs %}
+{% include 'shared/_navbar.html' %}
 
-            <h1>검색 결과가 없습니다</h1>
+<style>
+*{
+    font-family: "AppleSDGothicNeoB";
+}
+</style>
 
-        {% else %}
+<div class="search-container">
+    {% if not blogs %}
 
+    <h1>검색 결과가 없습니다</h1>
 
-        {% for blog in blogs.all %}
-        <div class="container"> 
-            <div class="card">
-                <div class="card-body">
-                    <h1>출발 : {{ blog.title }}</h1>
-                    <h2>도착 : {{ blog.writer }}</h2>
-                    <p>{{ blog.summary }}<a href="{% url 'detail' blog.id %}"> ...자세히 보기</a></p> 
-                </div>
-            </div>
+    {% else %}
+    <div class="build-img">
+        <img src="{% static 'media/건물.png' %}">
+    </div>
+    <div class="build-list"> 
+        <div class="build-main">
+            {{ q }}
         </div>
-        <br>
-        {% endfor %}
+        <div class="build-main-list" style="height: 10000px;">
+            {% for blog in blogs %}
 
+            <div class="build-main-list-box">
+                <div class="box-img">
+                    <img src="{{ blog.image.url }}" alt="사진">
+                </div>
+                <div class="box-main">
+                    <div class="box-end">{{blog.end}}</div>
+                    <br>
+                    <div class="box-detail">{{blog.summary}}</div>
+                </div>
+                <a class="box-link" href="{% url 'detail' blog.id %}"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            {% if blog.id != 1 %}
+            <hr id="box-hr" style="width: 80%;">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <br>
     {% endif %}
+</div>
+
 
 {% endblock %}
