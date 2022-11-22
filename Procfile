@@ -1,0 +1,1 @@
+web: gunicorn IEproject.wsgi --log-file -
