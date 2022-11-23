@@ -1,6 +1,6 @@
 {% load static %}
 <div class="result-nav">
-    <div class="logo-img"><a href="{% url 'showmain' %}"><img src="{% static 'media/logo.png' %}" style="background-color: #BAC8CB;"></a></div>
+    <div class="logo-img"><a href="{% url 'showmain' %}"><img src="{% static 'media/logo.png' %}" style="background-color: #FFF; height: 100%;"></a></div>
     <form class="nav-search" action="{% url 'search' %}" method="post">
         {% csrf_token %}
         <input id="nav-search-input" type="search" placeholder="건물을 입력하세요" aria-label="Search" name="q" value="{{q}}">
