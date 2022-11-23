@@ -30,7 +30,7 @@
     <form class="search-box" action="{% url 'search' %}" method="post">
         {% csrf_token %}
         <input id="search-form-input" type="search" placeholder="건물을 입력하세요" aria-label="Search" name="q" value="{{q}}" style="background-color: #FFF;">
-        <button id="search-form-button" type="submit"><i id="search-form-button-img" class="fa-solid fa-location-dot"></i></button>
+        <button id="search-form-button" type="submit"><img src="{% static 'media/pinmark.png' %}" style="height: 50%;"></button>
     </form>
 </div>
 

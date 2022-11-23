@@ -4,6 +4,6 @@
     <form class="nav-search" action="{% url 'search' %}" method="post">
         {% csrf_token %}
         <input id="nav-search-input" type="search" placeholder="건물을 입력하세요" aria-label="Search" name="q" value="{{q}}">
-        <button id="nav-search-button" type="submit"><i id="nav-search-button" class="fa-solid fa-location-dot"></i></button>
+        <button id="nav-search-button" type="submit"><img src="{% static 'media/pinmark.png' %}" style="height: 100%;"></button>
     </form>
 </div>
