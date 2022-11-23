@@ -17,7 +17,7 @@
 
     {% else %}
     <div class="build-img">
-        <img src="{% static 'media/건물.png' %}">
+        <img src="{{ blog.image.url }}">
     </div>
     <div class="build-list"> 
         <div class="build-main">
@@ -28,7 +28,7 @@
 
             <div class="build-main-list-box">
                 <div class="box-img">
-                    <img src="{{ blog.image.url }}" alt="사진">
+                    <img src="{{blog.mapimg.url}}" alt="사진">
                 </div>
                 <div class="box-main">
                     <div class="box-end">{{blog.end}}</div>
